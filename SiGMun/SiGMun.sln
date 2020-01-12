@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SiGMun_DB", "SiGMun.DB\SiGMun_DB.sqlproj", "{5A32D928-3E6C-4CBF-9A5B-F21590A59075}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Word", "Word", "{B8349BF0-43E9-4666-AE81-576F6E79F331}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Desktop\MonoGrafia_SiGMun-master\Monografia.docx = ..\..\..\..\..\Desktop\MonoGrafia_SiGMun-master\Monografia.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A32D928-3E6C-4CBF-9A5B-F21590A59075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A32D928-3E6C-4CBF-9A5B-F21590A59075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A32D928-3E6C-4CBF-9A5B-F21590A59075}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5A32D928-3E6C-4CBF-9A5B-F21590A59075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A32D928-3E6C-4CBF-9A5B-F21590A59075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A32D928-3E6C-4CBF-9A5B-F21590A59075}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A5E3625-4551-44CB-B5F9-A40314E1E365}
+	EndGlobalSection
+EndGlobal
