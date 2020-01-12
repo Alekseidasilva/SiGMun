@@ -110,6 +110,7 @@
     <Build Include="Procedimentos\SP_DocsFinalidades_Alterar.sql" />
     <Build Include="Procedimentos\SP_DocsFinalidades_CarregarTodos.sql" />
     <Build Include="Procedimentos\SP_DocsFinalidades_Excluir.sql" />
+    <Build Include="Tabelas\TB_Operacao.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />
