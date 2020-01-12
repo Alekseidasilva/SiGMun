@@ -7,7 +7,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SiGMun_DB", "SiGMun.DB\SiGM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Word", "Word", "{B8349BF0-43E9-4666-AE81-576F6E79F331}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\..\Desktop\MonoGrafia_SiGMun-master\Monografia.docx = ..\..\..\..\..\Desktop\MonoGrafia_SiGMun-master\Monografia.docx
+		Word\Monografia.docx = Word\Monografia.docx
 	EndProjectSection
 EndProject
 Global
