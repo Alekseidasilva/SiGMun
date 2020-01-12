@@ -6,11 +6,11 @@ SELECT @@IdAuto=MAX(PerfilId) FROM dbo.TB_Perfil
 IF @@IdAuto IS NULL
 BEGIN
     SET @@IdAuto=0
+    set @@IdAuto=@@IdAuto+1
 END
-
-IF @@IdAuto=0
+ELSE
 BEGIN
-   SET @@IdAuto=@@IdAuto+1 
+SET @@IdAuto=@@IdAuto+1
 END
 BEGIN
     INSERT dbo.TB_Perfil(PerfilId,PerfilNome)

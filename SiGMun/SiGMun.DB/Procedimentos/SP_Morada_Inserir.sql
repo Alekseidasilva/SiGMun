@@ -4,6 +4,7 @@
 @MoradaZona	varchar(20),
 @MoradaBairroId	int	
 AS
+
 BEGIN
     INSERT dbo.TB_Moradas
     (

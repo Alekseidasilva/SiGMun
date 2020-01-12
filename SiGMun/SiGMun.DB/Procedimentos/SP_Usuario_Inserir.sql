@@ -12,12 +12,14 @@ SELECT @@IdAuto=MAX(UsuId) FROM dbo.TB_Usuarios
 IF @@IdAuto IS NULL
 BEGIN
     SET @@IdAuto=0
+    set @@IdAuto=@@IdAuto+1
 END
+else
+begin
+SET @@IdAuto=@@IdAuto+1
+end
 
-IF @@IdAuto=0
-BEGIN
-   SET @@IdAuto=@@IdAuto+1 
-END
+
 BEGIN
 
     INSERT INTO TB_Usuarios(UsuId,UsuNomeCompleto,UsuEmail,UsuSenha,UsuPerfilId,UsuDataCadastro,UsuIdUsuario,UsuEstado)

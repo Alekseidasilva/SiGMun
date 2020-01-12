@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{5a32d928-3e6c-4cbf-9a5b-f21590a59075}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -102,15 +102,19 @@
     <Build Include="Tabelas\TB_FormasPagamento.sql" />
     <Build Include="Tabelas\TB_Parente_Municipe.sql" />
     <Build Include="Tabelas\TB_GrauParentesco.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="SiGMun.DB.refactorlog" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SiGMun.DB.publish.xml" />
-    <None Include="SiGMun.DB_SoftDev.publish.publish.xml" />
+    <Build Include="Procedimentos\SP_Banco_Inserir.sql" />
+    <Build Include="Procedimentos\SP_Banco_Alterar.sql" />
+    <Build Include="Procedimentos\SP_Banco_Excluir.sql" />
+    <Build Include="Procedimentos\SP_Banco_CarregarTodos.sql" />
+    <Build Include="Procedimentos\SP_DocsFinalidades_Inserir.sql" />
+    <Build Include="Procedimentos\SP_DocsFinalidades_Alterar.sql" />
+    <Build Include="Procedimentos\SP_DocsFinalidades_CarregarTodos.sql" />
+    <Build Include="Procedimentos\SP_DocsFinalidades_Excluir.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SiGMun_DB_SoftDev.publish.xml" />
   </ItemGroup>
 </Project>

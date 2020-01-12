@@ -8,11 +8,11 @@ SELECT @@IdAuto=MAX(ComunaId) FROM dbo.TB_Comunas
 IF @@IdAuto IS NULL
 BEGIN
     SET @@IdAuto=0
+    set @@IdAuto=@@IdAuto+1
 END
-
-IF @@IdAuto=0
+ELSE
 BEGIN
-   SET @@IdAuto=@@IdAuto+1 
+SET @@IdAuto=@@IdAuto+1
 END
 BEGIN
     INSERT dbo.TB_Comunas

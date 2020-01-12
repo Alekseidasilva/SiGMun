@@ -19,9 +19,13 @@ EXEC dbo.SP_Usuario_Inserir @UsuNomeCompleto = 'Aleksei da Silva',
                             @UsuDataCadastro = '2020-01-07', 
                             @UsuIdUsuario = 1,
                             @UsuEstado = 1  
-
-INSERT dbo.TB_Generos(GeneroId,GeneroNome)VALUES(1,'MASCULINO'),(2,'FEMENINO')
+------------------Estado Civil----------------------------
 INSERT dbo.TB_EstadoCivil(EstadoCivilId,EstadoCivilNome)VALUES(1,'SOLTEIRO'),(2,'CASADO'),(3,'DIVORCIADO'),(4,'VIÚVO')
+---------------------------------Generos-----------------------------------------
+INSERT dbo.TB_Generos(GeneroId,GeneroNome)VALUES(1,'MASCULINO'),(2,'FEMENINO')
+
+
+
 
 -- BEGIN
 --DECLARE @@NM int 
