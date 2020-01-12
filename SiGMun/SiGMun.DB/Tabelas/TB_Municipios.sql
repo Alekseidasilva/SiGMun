@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[TB_Municipios]
 (
-	MunicipioId INT NOT NULL,
+	MunicipioId INT IDENTITY(1,1) NOT NULL,
 	MunicipioNome VARCHAR(50)NOT NULL,
 	MunicipioProvinciaId INT
 
