@@ -116,5 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SiGMun_DB_SoftDev.publish.xml" />
+    <None Include="SiGMun_DB_NotebookAleksei.publish.xml" />
   </ItemGroup>
 </Project>
