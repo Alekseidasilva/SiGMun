@@ -11,17 +11,18 @@
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>SiGMun.DB</RootNamespace>
-    <AssemblyName>SiGMun.DB</AssemblyName>
+    <RootNamespace>SiGMun_DB</RootNamespace>
+    <AssemblyName>SiGMun_DB</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -40,7 +41,7 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
@@ -60,57 +61,65 @@
     <Folder Include="Procedimentos" />
     <Folder Include="Funcoes" />
     <Folder Include="Padroes" />
+    <Folder Include="Procedimentos\Bairros" />
+    <Folder Include="Procedimentos\Bancos" />
+    <Folder Include="Procedimentos\Comunas" />
+    <Folder Include="Procedimentos\DocsFinalidades" />
+    <Folder Include="Procedimentos\Morada" />
+    <Folder Include="Procedimentos\Municipe" />
+    <Folder Include="Procedimentos\Perfil" />
+    <Folder Include="Procedimentos\Usuario" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tabelas\TB_Usuarios.sql" />
-    <Build Include="Procedimentos\SP_Usuario_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Usuario_CarregarTodos.sql" />
-    <Build Include="Procedimentos\SP_Usuario_Login.sql" />
-    <Build Include="Procedimentos\SP_Usuario_Alterar.sql" />
-    <Build Include="Procedimentos\SP_Usuario_Excluir.sql" />
-    <Build Include="Procedimentos\SP_Usuario_Alterar_Senha.sql" />
     <Build Include="Tabelas\TB_Perfil.sql" />
-    <Build Include="Procedimentos\SP_Perfil_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Perfil_CarregarTodos.sql" />
-    <Build Include="Procedimentos\SP_Perfil_Alterar.sql" />
     <Build Include="Tabelas\TB_Bairros.sql" />
     <Build Include="Tabelas\TB_Comunas.sql" />
     <Build Include="Tabelas\TB_Municipios.sql" />
     <Build Include="Tabelas\TB_Provincias.sql" />
-    <Build Include="Procedimentos\SP_Bairro_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Bairro_Alterar.sql" />
-    <Build Include="Procedimentos\SP_Bairro_Excluir.sql" />
-    <Build Include="Procedimentos\SP_Bairro_CarregarTodos.sql" />
-    <Build Include="Procedimentos\SP_Comuna_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Comuna_Alterar.sql" />
-    <Build Include="Procedimentos\SP_Comuna_Excluir.sql" />
-    <Build Include="Procedimentos\SP_Comuna_CarregarTodas.sql" />
     <Build Include="Tabelas\TB_Municipes.sql" />
     <Build Include="Tabelas\TB_Generos.sql" />
     <Build Include="Tabelas\TB_EstadoCivil.sql" />
     <Build Include="Tabelas\TB_Moradas.sql" />
-    <Build Include="Procedimentos\SP_Morada_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Morada_Alterar.sql" />
-    <Build Include="Procedimentos\SP_Morada_Excluir.sql" />
-    <Build Include="Procedimentos\SP_Municipe_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Municipe_Alterar.sql" />
-    <Build Include="Procedimentos\SP_Municipe_Excluir.sql" />
-    <Build Include="Procedimentos\SP_Municipe_CarregarTodos.sql" />
     <Build Include="Tabelas\TB_Bancos.sql" />
     <Build Include="Tabelas\TB_DocsFinalidades.sql" />
     <Build Include="Tabelas\TB_TiposDocumentos.sql" />
     <Build Include="Tabelas\TB_FormasPagamento.sql" />
     <Build Include="Tabelas\TB_Parente_Municipe.sql" />
     <Build Include="Tabelas\TB_GrauParentesco.sql" />
-    <Build Include="Procedimentos\SP_Banco_Inserir.sql" />
-    <Build Include="Procedimentos\SP_Banco_Alterar.sql" />
-    <Build Include="Procedimentos\SP_Banco_Excluir.sql" />
-    <Build Include="Procedimentos\SP_Banco_CarregarTodos.sql" />
-    <Build Include="Procedimentos\SP_DocsFinalidades_Inserir.sql" />
-    <Build Include="Procedimentos\SP_DocsFinalidades_Alterar.sql" />
-    <Build Include="Procedimentos\SP_DocsFinalidades_CarregarTodos.sql" />
-    <Build Include="Procedimentos\SP_DocsFinalidades_Excluir.sql" />
     <Build Include="Tabelas\TB_Operacao.sql" />
+    <Build Include="Procedimentos\Bairros\SP_Bairro_Alterar.sql" />
+    <Build Include="Procedimentos\Bairros\SP_Bairro_CarregarTodos.sql" />
+    <Build Include="Procedimentos\Bairros\SP_Bairro_Excluir.sql" />
+    <Build Include="Procedimentos\Bairros\SP_Bairro_Inserir.sql" />
+    <Build Include="Procedimentos\Bancos\SP_Banco_Alterar.sql" />
+    <Build Include="Procedimentos\Bancos\SP_Banco_CarregarTodos.sql" />
+    <Build Include="Procedimentos\Bancos\SP_Banco_Excluir.sql" />
+    <Build Include="Procedimentos\Bancos\SP_Banco_Inserir.sql" />
+    <Build Include="Procedimentos\Comunas\SP_Comuna_Alterar.sql" />
+    <Build Include="Procedimentos\Comunas\SP_Comuna_CarregarTodas.sql" />
+    <Build Include="Procedimentos\Comunas\SP_Comuna_Excluir.sql" />
+    <Build Include="Procedimentos\Comunas\SP_Comuna_Inserir.sql" />
+    <Build Include="Procedimentos\DocsFinalidades\SP_DocsFinalidades_Alterar.sql" />
+    <Build Include="Procedimentos\DocsFinalidades\SP_DocsFinalidades_CarregarTodos.sql" />
+    <Build Include="Procedimentos\DocsFinalidades\SP_DocsFinalidades_Excluir.sql" />
+    <Build Include="Procedimentos\DocsFinalidades\SP_DocsFinalidades_Inserir.sql" />
+    <Build Include="Procedimentos\Morada\SP_Morada_Alterar.sql" />
+    <Build Include="Procedimentos\Morada\SP_Morada_Excluir.sql" />
+    <Build Include="Procedimentos\Morada\SP_Morada_Inserir.sql" />
+    <Build Include="Procedimentos\Municipe\SP_Municipe_Alterar.sql" />
+    <Build Include="Procedimentos\Municipe\SP_Municipe_CarregarTodos.sql" />
+    <Build Include="Procedimentos\Municipe\SP_Municipe_Excluir.sql" />
+    <Build Include="Procedimentos\Municipe\SP_Municipe_Inserir.sql" />
+    <Build Include="Procedimentos\Perfil\SP_Perfil_Alterar.sql" />
+    <Build Include="Procedimentos\Perfil\SP_Perfil_CarregarTodos.sql" />
+    <Build Include="Procedimentos\Perfil\SP_Perfil_Inserir.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_Alterar.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_Alterar_Senha.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_CarregarTodos.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_Excluir.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_Inserir.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_Login.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />
@@ -118,5 +127,8 @@
   <ItemGroup>
     <None Include="SiGMun_DB_SoftDev.publish.xml" />
     <None Include="SiGMun_DB_NotebookAleksei.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SiGMun_DB.refactorlog" />
   </ItemGroup>
 </Project>

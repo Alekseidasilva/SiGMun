@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[TB_Municipes]
 (
-    MunicipeId INT,
+    MunicipeId INT NOT NULL,
 	MunicipeNM bigint NOT NULL,
 	MunicipeNomeCompleto varchar(100) NOT NULL,
 	MunicipeDataNascimento date NOT NULL,
