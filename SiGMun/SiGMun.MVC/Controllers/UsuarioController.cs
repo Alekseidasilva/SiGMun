@@ -1,10 +1,6 @@
 ﻿using SiGMun.Helpers.Recursos;
 using SiGMun.Helpers.Validacoes;
 using SiGMun.MVC.Models.Usuarios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace SiGMun.MVC.Controllers
