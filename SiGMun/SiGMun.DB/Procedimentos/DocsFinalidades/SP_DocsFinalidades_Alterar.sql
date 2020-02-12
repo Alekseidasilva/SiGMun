@@ -2,13 +2,13 @@
 @FinalidadeId INT,
 @FinalidadeNome VARCHAR(max),
 @FinalidadeEstado BIT,
-@FinalidadeusuarioId int
+@FinalidadeUsuarioId int
 AS
 BEGIN
     UPDATE dbo.TB_DocsFinalidades SET
     FinalidadeNome=@FinalidadeNome,
     FinalidadeEstado=@FinalidadeEstado,
-    FinalidadeusuarioId=@FinalidadeusuarioId
+    FinalidadeUsuarioId=@FinalidadeUsuarioId
     WHERE
     FinalidadeId=@FinalidadeId
 END

@@ -12,6 +12,7 @@ BEGIN
 	UsuIdUsuario,
 	UsuEstado 
 	FROM dbo.TB_Usuarios
-	WHERE UsuEmail=@Email AND UsuSenha=@Senha
+	WHERE UsuEmail=@Email AND UsuSenha=@Senha 
+	--AND UsuEstado=1
 	
 END

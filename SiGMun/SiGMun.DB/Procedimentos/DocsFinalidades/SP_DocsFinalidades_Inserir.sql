@@ -2,7 +2,7 @@
 
 @FinalidadeNome VARCHAR(max),
 @FinalidadeEstado BIT,
-@FinalidadeusuarioId int
+@FinalidadeUsuarioId int
 AS
 DECLARE @@IdAuto int
 SELECT @@IdAuto=MAX(FinalidadeId) FROM dbo.TB_DocsFinalidades
@@ -20,13 +20,13 @@ BEGIN
 FinalidadeId,
 FinalidadeNome,
 FinalidadeEstado,
-FinalidadeusuarioId
+FinalidadeUsuarioId
     )
     VALUES
     (
 @@IdAuto,
 @FinalidadeNome,
 @FinalidadeEstado,
-@FinalidadeusuarioId
+@FinalidadeUsuarioId
     )
 END
