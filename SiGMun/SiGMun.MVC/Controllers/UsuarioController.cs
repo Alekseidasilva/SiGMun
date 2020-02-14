@@ -15,9 +15,9 @@ namespace SiGMun.MVC.Controllers
             return View("Teste");
         }
 
-        public bool Login(string email,string senha)
+        public ActionResult Login(string email,string senha)
         {
-            return true;
+            return View();
         }
         [HttpPost]
         public void Inserir(UsuarioModel usuarioModelo)
