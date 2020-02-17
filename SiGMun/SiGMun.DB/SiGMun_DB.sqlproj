@@ -120,6 +120,7 @@
     <Build Include="Procedimentos\Usuario\SP_Usuario_Excluir.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Inserir.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Login.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_BuscarPorEmail.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />

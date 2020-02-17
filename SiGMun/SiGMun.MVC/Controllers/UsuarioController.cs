@@ -2,27 +2,29 @@
 using SiGMun.Helpers.Validacoes;
 using SiGMun.MVC.Models.Usuarios;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace SiGMun.MVC.Controllers
 {
     public class UsuarioController : Controller
     {
         // GET: Usuario
-        public ActionResult Index(UsuarioModel usuario)
+        public ActionResult Index(UsuarioModelo usuario)
         {
             //usuario.
             //Validar(usuario);
-            return View("Teste");
+            return View();
         }
-
-        public ActionResult Login(string email,string senha)
+       
+        public ActionResult Login()
         {
             return View();
         }
+      
         [HttpPost]
-        public void Inserir(UsuarioModel usuarioModelo)
+        public void Inserir(UsuarioModelo usuarioModelo)
         {
-            
+          
 
         }
         private string TrocarSenha(string senha, string confirmarSenha)
@@ -30,7 +32,7 @@ namespace SiGMun.MVC.Controllers
             AssertionConcern.AssertArgumentNotNull(senha, Errors.SenhaInvalida);
             AssertionConcern.AssertArgumentNotNull(confirmarSenha, Errors.SenhaInvalida);
             AssertionConcern.AssertArgumentEquals(senha, confirmarSenha, Errors.SenhasNaoCombinam);
-            AssertionConcern.AssertArgumentLength(senha, 6, 20, Errors.SenhaInvalida);
+            
            return senha = PasswordAssertionConcern.Encrypt(senha).ToString();
         }
         private string RedefinirSenha()
@@ -41,7 +43,7 @@ namespace SiGMun.MVC.Controllers
         }
         
         
-        void Validar(UsuarioModel usuarioModel)
+        void Validar(UsuarioModelo usuarioModel)
         {
 
             AssertionConcern.AssertArgumentLength(usuarioModel.UsuNomeCompleto, 6, 250, Errors.CampoInvalido);
