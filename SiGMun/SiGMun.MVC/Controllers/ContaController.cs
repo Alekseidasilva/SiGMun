@@ -14,9 +14,9 @@ namespace SiGMun.MVC.Controllers
         // GET: Conta
         public ActionResult Login(string returnUrl)
         {
-            var model = new UsuarioVM() { ReturnUrl = returnUrl };
-            return View(model);
-            return View();
+            var model = new UsuarioVM()
+            { ReturnUrl = returnUrl };
+            return View(model);            
         }
 
         [HttpPost]
@@ -32,7 +32,6 @@ namespace SiGMun.MVC.Controllers
                     UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
                     return Redirect(usuario.ReturnUrl);
                 }
-
             }
             return RedirectToAction("Index", "Home");
         }

@@ -37,18 +37,13 @@ namespace SiGMun.MVC.Controllers
         }
         private string RedefinirSenha()
         {
-            string senha = "123456";
-            senha = PasswordAssertionConcern.Encrypt(senha);
-            return senha;
-        }
-        
-        
+            string senha = "123456";            
+            return senha = PasswordAssertionConcern.Encrypt(senha);
+        }        
         void Validar(UsuarioModelo usuarioModel)
         {
-
             AssertionConcern.AssertArgumentLength(usuarioModel.UsuNomeCompleto, 6, 250, Errors.CampoInvalido);
-            EmailAssertionConcern.AssertIsValid(usuarioModel.UsuEmail);
-            //AssertionConcern.
+            EmailAssertionConcern.AssertIsValid(usuarioModel.UsuEmail);            
         }
 
 
