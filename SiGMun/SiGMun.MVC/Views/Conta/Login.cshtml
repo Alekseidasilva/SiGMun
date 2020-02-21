@@ -1,126 +1,92 @@
-﻿
+﻿<!DOCTYPE html>
 @model SiGMun.MVC.Models.UsuarioVM
 @{
     Layout = null;
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SiGMun | Entrar </title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Font Awesome -->
-    <link href="~/Content/Login/all.min.css" rel="stylesheet" />
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- icheck bootstrap -->   
-    <link href="~/Content/Login/icheck-bootstrap.min.css" rel="stylesheet" />
-    <!-- Theme style -->   
-    <link href="~/Content/Login/adminlte.min.css" rel="stylesheet" />
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
-<body class="hold-transition login-page">
-
-    @using (Html.BeginForm())
-    {
-         <div class="login-box">
-             <div class="login-logo">
-                 <a href="@Url.Action("Index","Home")" style="font-family:Sriracha; font-size: 70px"><b>SiGMun</b></a>
-
-                 <h6  style="font-family: Batang; font-size: 25px"  >Sistema de Gestão de Munícipes</h6>
-             </div> 
-           <!-- /.login-logo -->
-                    <div class="card">
-                        <div class="card-body login-card-body">
-                            <p class="login-box-msg">Insira as Credênciais</p>
-                            <div class="input-group mb-3">
-                                <input type="email" class="form-control" placeholder="Email" name="UsuEmail">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <img src="~/Content/Imagens/secured_letter_20px.png" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="password" class="form-control" placeholder="Senha" name="UsuSenha">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <img src="~/Content/Imagens/lock_20px1.png" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                @*<div class="col-8">
-                                    <div class="icheck-primary">
-                                        <input type="checkbox" id="remember" name="PermanecerLogado" value="@Model.PermanecerLogado">
-                                        <label for="remember">
-                                            Lembrar me
-                                        </label>
-                                    </div>
-                                </div>*@
-
-
-                                <div class="col-8">
-                                    <div class="icheck-primary" >
-                                        @*@Html.CheckBoxFor()*@
-                                        <label for="remember" >
-                                            Lembrar me
-                                        </label>
-                                    </div>
-                                </div>
-
-
-
-
-                                <!-- /.col -->
-                                <div class="col-4">
-                                    <button type="submit" class="btn btn-primary btn-block">
-                                        ENTRAR
-                                    </button>
-                                </div>
-                                <!-- /.col -->
-                            </div>
-
-
-
-
-
-
-
-
-                            <div class="social-auth-links text-center mb-3">
-                                <p>- OU -</p>
-                                <a href="#" class="btn btn-block btn-primary">
-                                    <img src="~/Content/Imagens/facebook_30px.png" />
-                                    Entrar usando Facebook
-                                </a>
-                                <a href="#" class="btn btn-block btn-danger">
-                                    <img src="~/Content/Imagens/google_30px.png" />
-                                    Entrar usando Google+
-                                </a>
-                            </div>
-                            <!-- /.social-auth-links -->
-
-                            <p class="mb-1">
-                                <a href="#">Esqueci minha senha</a>
-                            </p>
-                        </div>
-                        <!-- /.login-card-body -->
-                    </div>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SiGMun | Entrar </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Theme style -->
+        <link href="~/Content/Login/adminlte.min.css" rel="stylesheet" />
+        </head>
+    <body class="hold-transition login-page">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="login-box">
+                <div class="login-logo">
+                    <a href="@Url.Action("Index","Home")" style="font-family:Bell MT; font-size: 90px"><b>SiGMun</b></a>
+                    <h6 style="font-family: Poor Richard; font-size: 25px">Sistema de Gestão de Munícipes</h6>
                 </div>
-                <!-- /.login-box -->
-                <!-- jQuery -->
-                <script src="~/Content/Login/jquery.min.js"></script>
-                <!-- Bootstrap 4 -->
-                <script src="~/Content/Login/bootstrap.bundle.min.js"></script>
-                <!-- AdminLTE App -->
-                <script src="~/Content/Login/adminlte.min.js"></script>
-        
-    }
+                <!-- /.login-logo -->
+                <div class="card">
+                    <div class="card-body login-card-body">
+                        <p class="login-box-msg">Insira as Credênciais</p>
+                        @*------------------------------------------------------------------------------------------------------------*@
 
-</body>
-</html>
+                        <div class="input-group mb-3">
+                            @Html.TextBoxFor(Model => Model.UsuEmail, htmlAttributes: new { @class = "form-control", placeholder = "Email" })
+                            @Html.ValidationMessageFor(model => model.UsuEmail, "", new { @class = "text-danger" })
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <img src="~/Content/Imagens/secured_letter_20px.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            @Html.PasswordFor(Model => Model.UsuSenha, htmlAttributes: new { @class = "form-control", placeholder = "Senha" })
+                            @Html.ValidationMessageFor(model => model.UsuSenha, "", new { @class = "text-danger" })
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <img src="~/Content/Imagens/lock_20px1.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.PermanecerLogado)
+                                    <label for="remember">
+                                        <small>Lembrar me</small>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    ENTRAR
+                                </button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                       
+                        
+                        
+
+                       
+
+                        <p class="mb-1">
+                            <a href="#">Esqueci minha senha</a>
+                        </p>
+                    </div>
+                    <!-- /.login-card-body -->
+                </div>
+            </div>
+            <!-- /.login-box -->
+            <!-- jQuery -->
+            <script src="~/Content/Login/jquery.min.js"></script>
+            <!-- Bootstrap 4 -->
+            <script src="~/Content/Login/bootstrap.bundle.min.js"></script>
+            <!-- AdminLTE App -->
+            <script src="~/Content/Login/adminlte.min.js"></script>
+
+        }
+
+    </body>
+    
+    </html>
+

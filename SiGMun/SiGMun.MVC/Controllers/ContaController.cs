@@ -1,4 +1,5 @@
-﻿using SiGMun.Helpers.Recursos;
+﻿using System;
+using SiGMun.Helpers.Recursos;
 using SiGMun.Helpers.Validacoes;
 using SiGMun.MVC.Controllers.Repositorios;
 using SiGMun.MVC.Models;
@@ -22,18 +23,27 @@ namespace SiGMun.MVC.Controllers
         [HttpPost]
         public ActionResult Login(UsuarioVM usuario)
         {
-            if (ModelState.IsValid)
+            //Verificar se os campos estão nulls
+            if (!string.IsNullOrEmpty(usuario.UsuEmail) & !string.IsNullOrEmpty(usuario.UsuSenha))
             {
-                FormsAuthentication.SetAuthCookie(usuario.UsuEmail, usuario.PermanecerLogado);
+                var Encontrado=  UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
+                if (usuario.UsuEmail==Encontrado.UsuEmail & usuario.UsuSenha == Encontrado.UsuSenha)
+                {
+
+                }
                 if ( Url.IsLocalUrl(usuario.ReturnUrl))
                 {
                     ValidarEmail(usuario.UsuEmail);
-                   usuario.UsuSenha= ValidarSenha(usuario.UsuSenha);
+                    usuario.UsuSenha= ValidarSenha(usuario.UsuSenha);
                     UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
                     return Redirect(usuario.ReturnUrl);
                 }
             }
+
+            return View();
             return RedirectToAction("Index", "Home");
+
+
         }
 
         public ActionResult LogOut()
@@ -47,7 +57,7 @@ namespace SiGMun.MVC.Controllers
             AssertionConcern.AssertArgumentNotNull(senha, Errors.CampoEmBranco);
             AssertionConcern.AssertArgumentLength(senha, 6, 20, Errors.SenhaInvalida);
             PasswordAssertionConcern.AssertIsValid(senha);
-           return senha=PasswordAssertionConcern.Encrypt(senha);
+             return senha=PasswordAssertionConcern.Encrypt(senha);
             
         }
 
