@@ -24,21 +24,27 @@ namespace SiGMun.MVC.Controllers
         public ActionResult Login(UsuarioVM usuario)
         {
             //Verificar se os campos estão nulls
-            if (!string.IsNullOrEmpty(usuario.UsuEmail) & !string.IsNullOrEmpty(usuario.UsuSenha))
+            if (!string.IsNullOrEmpty(usuario.UsuEmail))
             {
-                var Encontrado=  UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
-                if (usuario.UsuEmail==Encontrado.UsuEmail & usuario.UsuSenha == Encontrado.UsuSenha)
+                if (!string.IsNullOrEmpty(usuario.UsuSenha))
                 {
-
-                }
-                if ( Url.IsLocalUrl(usuario.ReturnUrl))
-                {
-                    ValidarEmail(usuario.UsuEmail);
-                    usuario.UsuSenha= ValidarSenha(usuario.UsuSenha);
-                    UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
-                    return Redirect(usuario.ReturnUrl);
+                    var Encontrado=  UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
+                    if (usuario.UsuEmail==Encontrado.UsuEmail)
+                    {
+                        if (usuario.UsuSenha == Encontrado.UsuSenha)
+                        {
+                        }
+                    }
+                    if ( Url.IsLocalUrl(usuario.ReturnUrl))
+                    {
+                        ValidarEmail(usuario.UsuEmail);
+                        usuario.UsuSenha= ValidarSenha(usuario.UsuSenha);
+                        UsuarioVMRep.Login(usuario.UsuEmail, usuario.UsuSenha);
+                        return Redirect(usuario.ReturnUrl);
+                    }
                 }
             }
+            ModelState.AddModelError("UsuEmail","Email inválido");
 
             return View();
             return RedirectToAction("Index", "Home");
