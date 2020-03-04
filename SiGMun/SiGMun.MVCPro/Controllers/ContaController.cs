@@ -44,7 +44,7 @@ namespace SiGMun.MVCPro.Controllers
             ModelState.AddModelError("UsuEmail","Email inválido");
 
             return View();
-            return RedirectToAction("Index", "Home");
+            //return RedirectToAction("Index", "Home");
 
 
         }
@@ -61,7 +61,7 @@ namespace SiGMun.MVCPro.Controllers
             //AssertionConcern.AssertArgumentLength(senha, 6, 20, Errors.SenhaInvalida);
             //PasswordAssertionConcern.AssertIsValid(senha);
             // return senha=PasswordAssertionConcern.Encrypt(senha);
-            
+            return "";
         }
 
         void ValidarEmail(string Email)

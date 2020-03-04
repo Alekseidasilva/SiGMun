@@ -1,8 +1,7 @@
-﻿using SiGMun.Infra;
-using SiGMun.MVC.Models;
-using SiGMun.MVC.Models.Usuarios;
+﻿using SiGMun.MVCPro.Models.Usuarios;
 using System;
 using System.Data;
+using SiGMun.Infra;
 
 namespace SiGMun.MVCPro.Controllers.Repositorios
 {

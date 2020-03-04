@@ -1,8 +1,5 @@
-﻿using SiGMun.Helpers.Recursos;
-using SiGMun.Helpers.Validacoes;
-using SiGMun.MVC.Models.Usuarios;
+﻿using SiGMun.MVCPro.Models.Usuarios;
 using System.Web.Mvc;
-using System.Web.Security;
 
 namespace SiGMun.MVCPro.Controllers
 {
@@ -29,21 +26,24 @@ namespace SiGMun.MVCPro.Controllers
         }
         private string TrocarSenha(string senha, string confirmarSenha)
         {
-            AssertionConcern.AssertArgumentNotNull(senha, Errors.SenhaInvalida);
-            AssertionConcern.AssertArgumentNotNull(confirmarSenha, Errors.SenhaInvalida);
-            AssertionConcern.AssertArgumentEquals(senha, confirmarSenha, Errors.SenhasNaoCombinam);
-            
-           return senha = PasswordAssertionConcern.Encrypt(senha).ToString();
+            // AssertionConcern.AssertArgumentNotNull(senha, Errors.SenhaInvalida);
+            // AssertionConcern.AssertArgumentNotNull(confirmarSenha, Errors.SenhaInvalida);
+            // AssertionConcern.AssertArgumentEquals(senha, confirmarSenha, Errors.SenhasNaoCombinam);
+
+            //return senha = PasswordAssertionConcern.Encrypt(senha).ToString();
+            return "";
         }
         private string RedefinirSenha()
         {
-            string senha = "123456";            
-            return senha = PasswordAssertionConcern.Encrypt(senha);
+            //string senha = "123456";            
+            //return senha = PasswordAssertionConcern.Encrypt(senha);
+            return "";
         }        
         void Validar(UsuarioModelo usuarioModel)
         {
-            AssertionConcern.AssertArgumentLength(usuarioModel.UsuNomeCompleto, 6, 250, Errors.CampoInvalido);
-            EmailAssertionConcern.AssertIsValid(usuarioModel.UsuEmail);            
+            //AssertionConcern.AssertArgumentLength(usuarioModel.UsuNomeCompleto, 6, 250, Errors.CampoInvalido);
+            //EmailAssertionConcern.AssertIsValid(usuarioModel.UsuEmail);    
+            ;
         }
 
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using SiGMun.Infra;
 using SiGMun.MVCPro.Controllers.Contratos;
 using SiGMun.MVCPro.Models.Usuarios;
 

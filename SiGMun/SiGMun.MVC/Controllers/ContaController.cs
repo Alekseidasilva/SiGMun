@@ -47,7 +47,7 @@ namespace SiGMun.MVC.Controllers
             ModelState.AddModelError("UsuEmail","Email inválido");
 
             return View();
-            return RedirectToAction("Index", "Home");
+            //return RedirectToAction("Index", "Home");
 
 
         }
