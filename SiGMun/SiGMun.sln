@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.Infra", "SiGMun.Infr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.Helpers", "SiGMun.Helpers\SiGMun.Helpers.csproj", "{D45286C4-2418-4A90-937F-35DE29ECC4ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.MVCPro", "SiGMun.MVCPro\SiGMun.MVCPro.csproj", "{C9D8F3F7-B4BF-493D-A458-40C4D009420D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{D45286C4-2418-4A90-937F-35DE29ECC4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D45286C4-2418-4A90-937F-35DE29ECC4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D45286C4-2418-4A90-937F-35DE29ECC4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D8F3F7-B4BF-493D-A458-40C4D009420D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D8F3F7-B4BF-493D-A458-40C4D009420D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D8F3F7-B4BF-493D-A458-40C4D009420D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D8F3F7-B4BF-493D-A458-40C4D009420D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

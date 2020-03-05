@@ -128,4 +128,7 @@
   <ItemGroup>
     <RefactorLog Include="SiGMun_DB.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SiGMun.DB.publish.xml" />
+  </ItemGroup>
 </Project>
