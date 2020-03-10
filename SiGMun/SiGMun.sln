@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Word", "Word", "{B8349BF0-43E9-4666-AE81-576F6E79F331}"
 	ProjectSection(SolutionItems) = preProject
 		Word\Monografia.docx = Word\Monografia.docx
+		Word\Monografia1.docx = Word\Monografia1.docx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.Infra", "SiGMun.Infra\SiGMun.Infra.csproj", "{183D7FAD-FF38-49EE-AF6C-F5750225610B}"
