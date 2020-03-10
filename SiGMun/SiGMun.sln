@@ -16,6 +16,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.Helpers", "SiGMun.He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.MVCPro", "SiGMun.MVCPro\SiGMun.MVCPro.csproj", "{C9D8F3F7-B4BF-493D-A458-40C4D009420D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Livros", "Livros", "{C3FD948B-FDE8-4CBC-AA3C-8D6ACBCEE264}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Downloads\Batista.R.M..pdf = ..\..\..\..\..\Downloads\Batista.R.M..pdf
+		..\..\..\..\..\Downloads\MONOGRAFIA_DesenvolvimentoSistemaWeb.pdf = ..\..\..\..\..\Downloads\MONOGRAFIA_DesenvolvimentoSistemaWeb.pdf
+		..\..\..\..\..\Downloads\ProjetoDesenvolvimentoSistema.pdf = ..\..\..\..\..\Downloads\ProjetoDesenvolvimentoSistema.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +50,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C3FD948B-FDE8-4CBC-AA3C-8D6ACBCEE264} = {B8349BF0-43E9-4666-AE81-576F6E79F331}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A5E3625-4551-44CB-B5F9-A40314E1E365}
