@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Word", "Word", "{B8349BF0-43E9-4666-AE81-576F6E79F331}"
 	ProjectSection(SolutionItems) = preProject
 		Word\Monografia.docx = Word\Monografia.docx
+		Word\Monografia1.docx = Word\Monografia1.docx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.Infra", "SiGMun.Infra\SiGMun.Infra.csproj", "{183D7FAD-FF38-49EE-AF6C-F5750225610B}"
@@ -15,6 +16,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.Helpers", "SiGMun.Helpers\SiGMun.Helpers.csproj", "{D45286C4-2418-4A90-937F-35DE29ECC4ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiGMun.MVCPro", "SiGMun.MVCPro\SiGMun.MVCPro.csproj", "{C9D8F3F7-B4BF-493D-A458-40C4D009420D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Livros", "Livros", "{C3FD948B-FDE8-4CBC-AA3C-8D6ACBCEE264}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Downloads\Batista.R.M..pdf = ..\..\..\..\..\Downloads\Batista.R.M..pdf
+		..\..\..\..\..\Downloads\MONOGRAFIA_DesenvolvimentoSistemaWeb.pdf = ..\..\..\..\..\Downloads\MONOGRAFIA_DesenvolvimentoSistemaWeb.pdf
+		..\..\..\..\..\Downloads\ProjetoDesenvolvimentoSistema.pdf = ..\..\..\..\..\Downloads\ProjetoDesenvolvimentoSistema.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +51,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C3FD948B-FDE8-4CBC-AA3C-8D6ACBCEE264} = {B8349BF0-43E9-4666-AE81-576F6E79F331}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A5E3625-4551-44CB-B5F9-A40314E1E365}
