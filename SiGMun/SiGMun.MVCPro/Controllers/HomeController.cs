@@ -2,13 +2,18 @@
 
 namespace SiGMun.MVCPro.Controllers
 {
-    [Authorize]
+   
     public class HomeController : Controller
     {
-       
-        // GET: Home
 
+        // GET: Home
+        [Authorize]
         public ActionResult Dashboard()
+        {
+            return View();
+        }
+
+        public ActionResult Sobre()
         {
             return View();
         }

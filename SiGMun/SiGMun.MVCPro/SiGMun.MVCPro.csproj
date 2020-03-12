@@ -6574,7 +6574,6 @@
     <Compile Include="Models\UsuarioVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_Contratos\IUsuario.cs" />
-    <Compile Include="_Contratos\IUsuarioVm.cs" />
     <Compile Include="_Repositorios\UsuarioVmRep.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -7185,6 +7184,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\Sobre.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -7204,6 +7204,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SiGMun.Helpers\SiGMun.Helpers.csproj">
+      <Project>{D45286C4-2418-4A90-937F-35DE29ECC4ED}</Project>
+      <Name>SiGMun.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SiGMun.Infra\SiGMun.Infra.csproj">
       <Project>{183D7FAD-FF38-49EE-AF6C-F5750225610B}</Project>
       <Name>SiGMun.Infra</Name>
