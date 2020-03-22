@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[SP_Usuario_CarregarTodos]
+﻿ CREATE PROCEDURE [dbo].[SP_Usuario_CarregarTodos]
 	
 AS
 BEGIN

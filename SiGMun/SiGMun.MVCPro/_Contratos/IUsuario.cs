@@ -9,6 +9,6 @@ namespace SiGMun.MVCPro._Contratos
         bool Adicionar(UsuarioModel usuarioModelo);
         bool Alterar(UsuarioModel usuarioModelo);
         bool Excluir(UsuarioModel usuarioModelo);
-        UsuarioModel Login(UsuarioVm usuarioVm);
+        UsuarioModel Login(string email, string senha);
     }
 }

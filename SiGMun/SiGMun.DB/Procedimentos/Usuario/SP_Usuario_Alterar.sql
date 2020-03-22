@@ -1,8 +1,8 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Usuario_Alterar]
 	@UsuId int,
 	@UsuNomeCompleto varchar(100),
-	@UsuEmail varchar(50),
-	@UsuSenha varchar(50),
+	@UsuEmail varchar(200),
+	@UsuSenha varchar(200),
 	@UsuPerfilId int,
 	@UsuDataCadastro DATE,
 	@UsuIdUsuario int,

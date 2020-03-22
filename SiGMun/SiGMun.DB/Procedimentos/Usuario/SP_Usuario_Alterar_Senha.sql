@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Usuario_Alterar_Senha]
 	@UsuId INT,
-	@UsuSenha VARCHAR(50)
+	@UsuSenha VARCHAR(200)
     
 AS
 BEGIN

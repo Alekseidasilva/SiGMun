@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE dbo.SP_Usuario_Inserir
 @UsuNomeCompleto varchar(100),
-@UsuEmail varchar(50),
-@UsuSenha VARCHAR(50),
+@UsuEmail varchar(200),
+@UsuSenha VARCHAR(200),
 @UsuPerfilId INT,
 @UsuDataCadastro date,
 @UsuIdUsuario INt,

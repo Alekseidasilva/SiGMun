@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Usuario_Login]
-	@Email VARCHAR(50),
-	@Senha VARCHAR(50)
+	@Email VARCHAR(200),
+	@Senha VARCHAR(200)
 AS
 BEGIN
     SELECT 

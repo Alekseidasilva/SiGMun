@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Usuario_BuscarPorEmail]
-	@UsuEmail VARCHAR(100)
+	@UsuEmail VARCHAR(200)
 	
 AS
 BEGIN

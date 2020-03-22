@@ -2,8 +2,8 @@
 (
 	[UsuId] INT NOT NULL, 
     [UsuNomeCompleto] VARCHAR(100) NULL, 
-    [UsuEmail] VARCHAR(50) NULL, 
-    [UsuSenha] VARCHAR(50) NULL, 
+    [UsuEmail] VARCHAR(200) NULL, 
+    [UsuSenha] VARCHAR(200) NULL, 
     [UsuPerfilId] INT NULL, 
     [UsuDataCadastro] DATE NULL, 
     [UsuIdUsuario] INT NULL, 

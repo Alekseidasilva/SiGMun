@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using SiGMun.Helpers.Cripto;
 using SiGMun.Helpers.Validacoes;
 using SiGMun.Infra;
 using SiGMun.MVCPro._Contratos;
@@ -7,7 +8,7 @@ using SiGMun.MVCPro.Models;
 
 namespace SiGMun.MVCPro.Repositorios
 {
-    public class UsuarioVmRep:IUsuario
+    public class UsuarioRep:IUsuario
     {
         private ADOConexao conexao = new ADOConexao();
       
@@ -34,7 +35,17 @@ namespace SiGMun.MVCPro.Repositorios
 
         public bool Adicionar(UsuarioModel usuarioModelo)
         {
-            throw new NotImplementedException();
+            conexao.LimparParametro();
+            conexao.AdicionarParametros("@UsuNomeCompleto", usuarioModelo.UsuNomeCompleto);
+            //criptografar Usuario e Senha
+            conexao.AdicionarParametros("@UsuEmail", Criptografar.Encriptar(usuarioModelo.UsuEmail));
+            conexao.AdicionarParametros("@UsuSenha", Criptografar.Encriptar(usuarioModelo.UsuSenha));
+            conexao.AdicionarParametros("@UsuPerfilId", usuarioModelo.UsuPerfilId);
+            conexao.AdicionarParametros("@UsuDataCadastro", usuarioModelo.UsuDataCadastro);
+            conexao.AdicionarParametros("@UsuIdUsuario", usuarioModelo.UsuIdUsuario);
+            conexao.AdicionarParametros("@UsuEstado", usuarioModelo.UsuEstado);
+            bool res = Convert.ToBoolean(conexao.ExecutarManipulacao(CommandType.StoredProcedure, "SP_Usuario_Inserir"));
+            return res;
         }
 
         public bool Alterar(UsuarioModel usuarioModelo)
@@ -47,11 +58,12 @@ namespace SiGMun.MVCPro.Repositorios
             throw new NotImplementedException();
         }
 
-        public UsuarioModel Login(UsuarioVm usuarioVm)
+        public UsuarioModel Login(string UsuEmail, string UsuSenha)
         {
             conexao.LimparParametro();
-            conexao.AdicionarParametros("@Email", usuarioVm.UsuEmail);
-            conexao.AdicionarParametros("@Senha", usuarioVm.UsuSenha);
+                                                                                  //Criptografar os campos
+            conexao.AdicionarParametros("@Email", UsuEmail);
+            conexao.AdicionarParametros("@Senha", UsuSenha);
             DataTable tbUsuario = conexao.ExecutarConsulta(CommandType.StoredProcedure, "SP_Usuario_Login");
             UsuarioModel usuario = new UsuarioModel();
             foreach (DataRow linha in tbUsuario.Rows)
@@ -59,7 +71,6 @@ namespace SiGMun.MVCPro.Repositorios
                 usuario.UsuId = Convert.ToInt32(linha["UsuId"]);
                 usuario.UsuNomeCompleto = Convert.ToString(linha["UsuNomeCompleto"]);
                 usuario.UsuEmail = Convert.ToString(linha["UsuEmail"]);
-                usuario.UsuSenha =PasswordAssertionConcern.Encrypt(Convert.ToString(linha["UsuSenha"]));
                 usuario.UsuSenha = Convert.ToString(linha["UsuSenha"]);
                 usuario.UsuDataCadastro = Convert.ToDateTime(linha["UsuDataCadastro"]);
                 usuario.UsuEstado = Convert.ToBoolean(linha["UsuEstado"]);
@@ -68,5 +79,6 @@ namespace SiGMun.MVCPro.Repositorios
             }
             return usuario;
         }
+
     }
 }
