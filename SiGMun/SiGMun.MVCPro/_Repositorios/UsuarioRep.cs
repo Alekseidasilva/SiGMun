@@ -1,10 +1,9 @@
-﻿using System;
-using System.Data;
-using SiGMun.Helpers.Cripto;
-using SiGMun.Helpers.Validacoes;
+﻿using SiGMun.Helpers.Cripto;
 using SiGMun.Infra;
 using SiGMun.MVCPro._Contratos;
 using SiGMun.MVCPro.Models;
+using System;
+using System.Data;
 
 namespace SiGMun.MVCPro.Repositorios
 {
