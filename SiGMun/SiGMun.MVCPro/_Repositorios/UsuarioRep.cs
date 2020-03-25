@@ -60,7 +60,6 @@ namespace SiGMun.MVCPro.Repositorios
         public UsuarioModel Login(string UsuEmail, string UsuSenha)
         {
             conexao.LimparParametro();
-                                                                                  //Criptografar os campos
             conexao.AdicionarParametros("@Email", UsuEmail);
             conexao.AdicionarParametros("@Senha", UsuSenha);
             DataTable tbUsuario = conexao.ExecutarConsulta(CommandType.StoredProcedure, "SP_Usuario_Login");

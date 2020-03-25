@@ -10,6 +10,6 @@
     [UsuEstado] BIT NULL
     CONSTRAINT PK_UsuarioId PRIMARY KEY (UsuId),
     CONSTRAINT FK_UsuarioQCadastra FOREIGN KEY (UsuIdUsuario) REFERENCES TB_Usuarios,
-    CONSTRAINT FK_PerfilQPertenceOUsuario FOREIGN KEY (UsuPerfilId) REFERENCES TB_Perfil
+    CONSTRAINT FK_PerfilQPertenceOUsuario FOREIGN KEY (UsuPerfilId) REFERENCES TB_Perfil_Usuario
     
 )

@@ -21,9 +21,11 @@ namespace SiGMun.MVCPro.Controllers
        [HttpPost]
        public ActionResult Login(UsuarioVm usuario)
        {
-           usuario.UsuEmail = Criptografar.Encriptar(usuario.UsuEmail);
-           usuario.UsuSenha = Criptografar.Encriptar(usuario.UsuSenha);
-           if (ModelState.IsValid)
+
+
+            usuario.UsuEmail = Criptografar.Encriptar(usuario.UsuEmail);
+            usuario.UsuSenha = Criptografar.Encriptar(usuario.UsuSenha);
+            if (ModelState.IsValid)
            {
                var Encontrado = _usuarioRep.Login(usuario.UsuEmail, usuario.UsuSenha);
                 if (Encontrado != null && (Encontrado.UsuEmail == usuario.UsuEmail && Encontrado.UsuSenha == usuario.UsuSenha))
@@ -33,9 +35,11 @@ namespace SiGMun.MVCPro.Controllers
                     if (!string.IsNullOrEmpty(usuario.UsuReturnUrl) && Url.IsLocalUrl(usuario.UsuReturnUrl))
                     {
                         return Redirect(usuario.UsuReturnUrl);//Retornar pra o local desejado
+                        Session["username"] = usuario.UsuEmail.ToString();
                     }
                     return RedirectToAction("Dashboard", "Home");
                 }
+                
            }
             return View(usuario);
         }
@@ -46,5 +50,7 @@ namespace SiGMun.MVCPro.Controllers
           return  RedirectToAction("Login");
           
        }
+
+      
     }
 }

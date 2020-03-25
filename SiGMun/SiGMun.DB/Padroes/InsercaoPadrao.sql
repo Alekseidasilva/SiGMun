@@ -10,7 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 -------------------------Inserir Perfil------------------------------------
-EXEC dbo.SP_Perfil_Inserir @PerfilNome = 'Administrador' 
+EXEC dbo.SP_Perfil_Usuario_Inserir @PerfilNome = 'Administrador' 
 ---------------------------Inserir Usuario------------------------------------
 EXEC dbo.SP_Usuario_Inserir @UsuNomeCompleto = 'Aleksei da Silva',
                             @UsuEmail = 'obduSLYnNjiRg8srS9DkMIz8FRu8h6btWHd47xO17OJfjKelyQ43WPcje+CBOrJv14on1vF0yJ4QFnYeAdJETQ==',

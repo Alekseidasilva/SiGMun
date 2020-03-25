@@ -8,7 +8,7 @@ using SiGMun.MVCPro.Repositorios;
 
 namespace SiGMun.MVCPro.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class UsuariosController : Controller
     {
         UsuarioRep _usuarioRep = new UsuarioRep();

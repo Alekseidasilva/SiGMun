@@ -1,30 +1,162 @@
 ﻿@model SiGMun.MVCPro.Models.UsuarioModel
 
-@{
-    ViewBag.Title = "Adicionar Usuário";
-}
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <h4>Adicionar Usuário</h4>
+    @{
+     
+        ViewBag.Title = "Adicionar Usuário";
+    }
+    <div class="container-fluid">
+        <form class="form-horizontal" action="/action_page.php">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
 
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-    <div class="box box-primary" style="margin-left: auto; margin-right: 100% padding-left: 500px"  >
 
 
+
+
+
+        <form>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">Text</span>
+                <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+            </div>
+        </form>
     </div>
 
-    <div class="form-group has-success">
-        <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Input with success</label>
-        <input type="text" class="form-control" id="inputSuccess" placeholder="Enter ...">
-        @Html.TextBoxFor(model =>model.UsuNomeCompleto, new {@class="form-control"})
-        <span class="help-block">Help block with success</span>
-    </div>
-   
 
 
 
 
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="container-fluid">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h4>Adicionar Usuário</h4>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="box box-success" style="margin-left: auto; margin-right: 100% padding-left: 500px">
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="form-group has-success">
+                <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> Preencha os dados do Municípe</label>
+                <input type="text" class="form-control" id="inputSuccess" placeholder="Enter ...">
+                <span>First Name</span>
+                @Html.TextBoxFor(model => model.UsuNomeCompleto, new { @class = "form-control" })
+                <span class="help-block">Help block with success</span>
+            </div>
+            <div class="card-img-top">
+                <img src="~/Imagens/Aleksei.JPG" style="border-radius: 50%; width: 200px;" />
+            </div>
+        </div>
+       
+
+    }
+</div>
+@*<div class="container">
+        <h2 class="title">Registration form</h2>
+        <form>
+            <div id="fname">
+                <span>First Name</span>
+                <input type="text">
+            </div>
+            <div id="lname">
+                <span>Last Name</span>
+                <input type="text">
+            </div>
+            <div id="nname">
+                <span>Nick Name</span>
+                <input type="text">
+            </div>
+            <div id="email">
+                <span>e-mail</span>
+                <input type="text">
+            </div>
+            <div id="pass">
+                <span>Password</span>
+                <input type="text">
+            </div>
+            <div id="dob">
+                <span>Date of Birth</span>
+                <input type="text">
+            </div>
+            <div id="gender">
+                <span>Gender</span>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Others
+            </div>
+            <div id="mobile">
+                <span>Mobile</span>
+                <input type="text">
+            </div>
+            <div id="address">
+                <span>Address</span>
+                <textarea rows="5"></textarea>
+            </div>
+            <input type="button" id="submit" value="submit">
+            <input type="button" id="reset" value="reset">
+        </form>
+    </div>*@
