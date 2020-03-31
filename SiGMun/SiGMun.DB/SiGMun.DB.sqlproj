@@ -67,12 +67,12 @@
     <Folder Include="Procedimentos\DocsFinalidades" />
     <Folder Include="Procedimentos\Morada" />
     <Folder Include="Procedimentos\Municipe" />
-    <Folder Include="Procedimentos\Perfil" />
+    <Folder Include="Procedimentos\Perfil_Usuario" />
     <Folder Include="Procedimentos\Usuario" />
+    <Folder Include="Procedimentos\Permissoes" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tabelas\TB_Usuarios.sql" />
-    <Build Include="Tabelas\TB_Perfil.sql" />
     <Build Include="Tabelas\TB_Bairros.sql" />
     <Build Include="Tabelas\TB_Comunas.sql" />
     <Build Include="Tabelas\TB_Municipios.sql" />
@@ -111,9 +111,9 @@
     <Build Include="Procedimentos\Municipe\SP_Municipe_CarregarTodos.sql" />
     <Build Include="Procedimentos\Municipe\SP_Municipe_Excluir.sql" />
     <Build Include="Procedimentos\Municipe\SP_Municipe_Inserir.sql" />
-    <Build Include="Procedimentos\Perfil\SP_Perfil_Alterar.sql" />
-    <Build Include="Procedimentos\Perfil\SP_Perfil_CarregarTodos.sql" />
-    <Build Include="Procedimentos\Perfil\SP_Perfil_Inserir.sql" />
+    <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_Alterar.sql" />
+    <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_CarregarTodos.sql" />
+    <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_Inserir.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Alterar.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Alterar_Senha.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_CarregarTodos.sql" />
@@ -121,6 +121,10 @@
     <Build Include="Procedimentos\Usuario\SP_Usuario_Inserir.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Login.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_BuscarPorEmail.sql" />
+    <Build Include="Tabelas\TB_Perfil_Usuario.sql" />
+    <Build Include="Tabelas\TB_Permissao_Por_Perfil.sql" />
+    <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_CarregarPorUsuario.sql" />
+    <Build Include="Procedimentos\Permissoes\SP_Permissao_CarregarPorPerfil.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />

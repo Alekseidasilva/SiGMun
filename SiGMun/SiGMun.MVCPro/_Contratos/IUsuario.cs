@@ -1,4 +1,5 @@
-﻿using SiGMun.MVCPro.Models;
+﻿using System.Collections.Generic;
+using SiGMun.MVCPro.Models;
 
 namespace SiGMun.MVCPro._Contratos
 {
@@ -9,6 +10,7 @@ namespace SiGMun.MVCPro._Contratos
         bool Adicionar(UsuarioModel usuarioModelo);
         bool Alterar(UsuarioModel usuarioModelo);
         bool Excluir(UsuarioModel usuarioModelo);
-        UsuarioModel Login(UsuarioVm usuarioVm);
+        UsuarioModel Login(string email, string senha);
+        List<UsuarioModel>  CarregarTodos();
     }
 }
