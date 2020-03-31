@@ -35,7 +35,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">*@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -350,21 +350,21 @@
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    <li class="header">MENÚ NAVEGAÇÃO</li>
+                    <li class="header"><i class="fa fa-circle-o text-green"></i> MENÚ NAVEGAÇÃO</li>
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-pie-chart"></i>
+                           <img src="~/Imagens/Botoes/menu/people_25px.png"/>
                             <span>MUNICÍPES</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Cadastrar</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Alterar</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Add Parente</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Consultar</a></li>
+                            <li><a href="#"><img src="~/Imagens/Botoes/submenu/add_user_male_19px.png"/> Cadastrar</a></li>
+                            <li><a href="#"><img src="~/Imagens/Botoes/submenu/registration_19px.png" /> Alterar</a></li>
+                            <li><a href="#"><img src="~/Imagens/Botoes/submenu/family_19px.png" /> Add Parente</a></li>
+                            <li><a href="#"><img src="~/Imagens/Botoes/submenu/search_19px.png" /> Consultar</a></li>
                         </ul>
 
                     </li>
@@ -372,7 +372,7 @@
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-laptop"></i>
+                            <img src="~/Imagens/Botoes/menu/data_pending_25px.png"/>
                             <span>SECRETARIA</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -415,11 +415,11 @@
                         </ul>
                     </li>
 
-                    <li class="header">LOCAIS</li>
+                    <li class="header"><i class="fa fa-circle-o text-green"></i> LOCAIS</li>
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-pie-chart"></i>
+                            <img src="~/Imagens/Botoes/menu/place_marker_25px.png" />
                             <span>LOCAIS</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -435,14 +435,14 @@
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-pie-chart"></i>
+                            <img src="~/Imagens/Botoes/menu/repository_25px.png" />
                             <span>RELATÓRIOS</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Municípes</a></li>
+                            <li><a href="#"><i class="fa fa-1x fa-user"></i>Municípes</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i>Secretaria</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i>Fiscalização</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i>Area Técnica</a></li>
@@ -452,7 +452,7 @@
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-pie-chart"></i>
+                            <img src="~/Imagens/Botoes/menu/gears_25px.png" />
                             <span>DEFINIÇÕES</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -462,7 +462,7 @@
                             <li><a href="#"><i class="fa fa-circle-o"></i>Patronal</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i>Responsáveis</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i>Perfil</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Usuários</a></li>
+                            <li><a href="@Url.Action("Index","Usuarios")"> <img src="~/Imagens/Botoes/submenu/add_user_group_man_man_19px.png" />Usuários</a></li>
                         </ul>
                     </li>
 

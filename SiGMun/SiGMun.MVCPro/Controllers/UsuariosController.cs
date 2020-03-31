@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using SiGMun.MVCPro.Models;
+﻿using SiGMun.MVCPro.Models;
 using SiGMun.MVCPro.Repositorios;
+using System.Web.Mvc;
 
 namespace SiGMun.MVCPro.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class UsuariosController : Controller
     {
         UsuarioRep _usuarioRep = new UsuarioRep();
@@ -16,7 +12,9 @@ namespace SiGMun.MVCPro.Controllers
         // GET: Usuarios
         public ActionResult Index()
         {
-            return View();
+          var usuarios=_usuarioRep.CarregarTodos();
+          
+            return View(usuarios);
         }
        
         public ActionResult Adicionar()

@@ -3,73 +3,58 @@
 @{
     ViewBag.Title = "Index";
 }
+    <section class="content active">
+        <p>
+            <button class="btn btn-success" id="@Url.Action("Adicionar")"> <i class="fa fa-2x fa-user-plus"></i> Adicionar</button>
+        </p>
+        <table>
+            @foreach (var item in Model)
+            {
+                <div class="row">
+                    <div class="col-lg-4 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                @{
+                                    char[] delimitador = { ' ' };
+                                    string[] pedacos = item.UsuNomeCompleto.Split(delimitador);
+                                    int tamanho = pedacos.Length;
+                                    int res = tamanho - 2;
+                                }
 
-<h2>Index</h2>
+                                <h3>@pedacos.First()  @pedacos[res] @pedacos.Last()</h3>
+                                <p> <b>Email: </b>@item.UsuEmail</p>
 
-<p>
-    @Html.ActionLink("Adicionar", "Adicionar")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuNomeCompleto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuSenha)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuPerfilId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuDataCadastro)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuIdUsuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UsuEstado)
-        </th>
-        <th></th>
-    </tr>
+                                <p>
+                                    <b>Perfíl:</b> @item.UsuIdUsuario&nbsp; &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <b>Estado:</b>
+                                    @if (item.UsuEstado == true)
+                                    {<label>Activado</label>}
+                                </p>
+                                <p>
+                                    <b>Data Cadastro:</b> @item.UsuDataCadastro.ToLongDateString()
+                                </p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion-usb"></i>
+                            </div>
 
-@*@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuNomeCompleto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuSenha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuPerfilId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuDataCadastro)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuIdUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsuEstado)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}*@
+                            <a href="#" class="small-box-footer">
+                                <button class="btn btn-warning" type="button" onclick="location.href='@Url.Action("Adicionar")'"><i class="fa fa-1x fa-edit"></i> Editar</button>|
+                                <button class="btn btn-danger"><i class="fa fa-1x fa-trash"></i> Excluir</button>
+                            </a>
 
-</table>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </table>
+      
+    </section>
+
+
+
+
