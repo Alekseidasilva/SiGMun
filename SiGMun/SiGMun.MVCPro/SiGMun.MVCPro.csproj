@@ -6475,6 +6475,7 @@
     <Content Include="Views\Usuarios\Adicionar.cshtml" />
     <Content Include="Views\Usuarios\Adicionar - Copy.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Alterar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

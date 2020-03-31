@@ -32,5 +32,17 @@ namespace SiGMun.MVCPro.Controllers
             return View("Index");
         }
 
+        public ActionResult Alterar(int UsuId)
+        {
+            var usuario = _usuarioRep.BuscarPorId(UsuId);
+            return View(usuario);
+        }
+        [HttpPost]
+        public ActionResult Alterar(UsuarioModel usuario)
+        {
+            
+            return View();
+        }
+
     }
 }

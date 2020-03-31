@@ -33,18 +33,17 @@ namespace SiGMun.MVCPro.Controllers
                 var Encontrado = _usuarioRep.Login(usuario.UsuEmail, usuario.UsuSenha);
                 if (Encontrado != null && (Encontrado.UsuEmail == usuario.UsuEmail && Encontrado.UsuSenha == usuario.UsuSenha))
                 {
-                    usuario.UsuEmail = Decriptografar.Desincriptar(usuario.UsuEmail);
+                    usuario.UsuEmail = Criptografar.Desincriptar(usuario.UsuEmail);
                     FormsAuthentication.SetAuthCookie(usuario.UsuEmail, usuario.UsuPermanecerLogado);//Autenticar 
-                                                                                                     //var  tiket= FormsAuthentication.Encrypt(new FormsAuthenticationTicket(1, usuario.UsuEmail,
-                                                                                                     //      DateTime.Now, DateTime.Now, usuario.UsuPermanecerLogado, "Gerente"));
-
-                    //  var cookie=new HttpCookie(FormsAuthentication.FormsCookieName,tiket);
+                                                                                         //var  tiket= FormsAuthentication.Encrypt(new FormsAuthenticationTicket(1, usuario.UsuEmail,
+                                                                                                     //      DateTime.Now, DateTime.Now, usuario.UsuPermanecerLogado, "Gerente"))
+                                                                                                     //  var cookie=new HttpCookie(FormsAuthentication.FormsCookieName,tiket);
                     //  Response.Cookies.Add(cookie);
 
                     if (!string.IsNullOrEmpty(usuario.UsuReturnUrl) && Url.IsLocalUrl(usuario.UsuReturnUrl))
                     {
                         return Redirect(usuario.UsuReturnUrl);//Retornar pra o local desejado
-                        Session["username"] = usuario.UsuEmail.ToString();
+                        //Session["username"] = usuario.UsuEmail.ToString();
                     }
                     return RedirectToAction("Dashboard", "Home");
                 }

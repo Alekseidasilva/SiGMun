@@ -115,7 +115,7 @@
     <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_CarregarTodos.sql" />
     <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_Inserir.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Alterar.sql" />
-    <Build Include="Procedimentos\Usuario\SP_Usuario_Alterar_Senha.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_AlterarSenha.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_CarregarTodos.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Excluir.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_Inserir.sql" />
@@ -125,6 +125,7 @@
     <Build Include="Tabelas\TB_Permissao_Por_Perfil.sql" />
     <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_CarregarPorUsuario.sql" />
     <Build Include="Procedimentos\Permissoes\SP_Permissao_CarregarPorPerfil.sql" />
+    <Build Include="Procedimentos\Usuario\SP_Usuario_BuscarPorId.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />
@@ -134,5 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SiGMun.DB.publish.xml" />
+    <None Include="SiGMun.DB_Notebook.publish.publish.xml" />
   </ItemGroup>
 </Project>

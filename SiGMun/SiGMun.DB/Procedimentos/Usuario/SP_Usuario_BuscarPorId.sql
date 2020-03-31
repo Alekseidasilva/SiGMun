@@ -1,8 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[SP_Usuario_BuscarPorEmail]
-	@UsuEmail VARCHAR(200)	
+﻿CREATE PROCEDURE [dbo].[SP_Usuario_BuscarPorId]
+	@UsuId VARCHAR(200)	
 AS
 BEGIN
-    SELECT 	
+    SELECT 
 	UsuId,
 	UsuEmail,
 	UsuNomeCompleto,
@@ -11,6 +11,6 @@ BEGIN
 	UsuDataCadastro,
 	UsuIdUsuario,
 	UsuEstado  FROM dbo.TB_Usuarios	
-	where UsuEmail=@UsuEmail
+	where UsuId=@UsuId
 	
 END

@@ -12,5 +12,6 @@ namespace SiGMun.MVCPro._Contratos
         bool Excluir(UsuarioModel usuarioModelo);
         UsuarioModel Login(string email, string senha);
         List<UsuarioModel>  CarregarTodos();
+        void ResetarSenha(UsuarioModel usuarioModel, string NovaSenha);
     }
 }
