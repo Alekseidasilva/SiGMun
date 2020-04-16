@@ -126,6 +126,7 @@
     <Build Include="Procedimentos\Perfil_Usuario\SP_Perfil_Usuario_CarregarPorUsuario.sql" />
     <Build Include="Procedimentos\Permissoes\SP_Permissao_CarregarPorPerfil.sql" />
     <Build Include="Procedimentos\Usuario\SP_Usuario_BuscarPorId.sql" />
+    <Build Include="Tabelas\TB_Usuario_Perfil.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Padroes\InsercaoPadrao.sql" />
